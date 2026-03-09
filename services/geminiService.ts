@@ -25,7 +25,7 @@ export const chatWithAssistant = async (history: ChatMessage[], availableProduct
     const ai = new GoogleGenAI({ apiKey });
 
     // Create a context-aware prompt with our product catalog
-    const productList = availableProducts.map(p => `- ${p.name} (ID: ${p.id}, Catégorie: ${p.category}, Prix: ${p.price}€, Description: ${p.description})`).join('\n');
+    const productList = availableProducts.map(p => `- ${p.name} (ID: ${p.id}, Catégorie: ${p.category}, Prix: ${p.price} $, Description: ${p.description})`).join('\n');
 
     const systemInstruction = `
       Tu es un assistant shopping expert pour "SHELLOS".

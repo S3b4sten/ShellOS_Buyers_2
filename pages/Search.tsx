@@ -109,7 +109,7 @@ export const Search: React.FC<SearchProps> = ({ addToCart, inventory, chatHistor
 
                       <div className="flex-1 min-w-0">
                         <h4 className="font-bold text-black text-sm truncate">{product.name}</h4>
-                        <p className="text-xs text-slate-600 font-bold">{product.price.toFixed(2)} €</p>
+                        <p className="text-xs text-slate-600 font-bold">{product.price.toFixed(2)} $</p>
                       </div>
 
                       <button

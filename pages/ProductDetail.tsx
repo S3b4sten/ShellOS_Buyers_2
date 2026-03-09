@@ -118,8 +118,8 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ addToCart, invento
           </div>
 
           <div className="flex items-baseline gap-3 mb-4">
-            <span className="text-3xl md:text-4xl font-black text-black">{product.price.toFixed(2)}€</span>
-            <span className="text-base text-black line-through font-medium">{(product.price * 1.2).toFixed(2)}€</span>
+            <span className="text-3xl md:text-4xl font-black text-black">{product.price.toFixed(2)} $</span>
+            <span className="text-base text-black line-through font-medium">{(product.price * 1.2).toFixed(2)} $</span>
           </div>
 
           <div className="flex gap-3 mb-6">
@@ -203,7 +203,7 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ addToCart, invento
           </div>
           <div>
             <h3 className="font-bold text-black text-sm">Livraison Express</h3>
-            <p className="text-xs text-black">Gratuite dès 50€.</p>
+            <p className="text-xs text-black">Gratuite dès 50 $.</p>
           </div>
         </GlassCard>
         <GlassCard className="flex items-center gap-4 p-4 border-slate-200 bg-white/60" hoverEffect={false}>
@@ -221,7 +221,7 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ addToCart, invento
       <div className="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-white border-t border-slate-200 z-50 flex gap-3 shadow-[0_-5px_20px_-5px_rgba(0,0,0,0.1)] pb-safe-area">
         <div className="flex flex-col justify-center">
           <span className="text-xs text-black font-bold">Total</span>
-          <span className="text-xl font-black text-black">{product.price.toFixed(0)}€</span>
+          <span className="text-xl font-black text-black">{product.price.toFixed(0)} $</span>
         </div>
         <button
           onClick={handleAddToCart}

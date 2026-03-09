@@ -48,26 +48,26 @@ export const Checkout: React.FC<CheckoutProps> = ({ cartItems, onCheckout, credi
     <div className="max-w-2xl mx-auto animate-fade-in pb-20 md:pb-12">
       <div className="flex items-center gap-3 mb-8">
         <div className="p-2 bg-white rounded-lg shadow-sm border border-slate-200">
-             <Lock className="text-black" size={24} />
+          <Lock className="text-black" size={24} />
         </div>
         <h1 className="text-3xl font-black text-black">Paiement Sécurisé</h1>
       </div>
 
       <GlassCard className="p-8 border-slate-300" hoverEffect={false}>
         <form onSubmit={handleSubmit} className="space-y-6">
-          
+
           <div className="space-y-5">
             <h3 className="text-sm font-black text-slate-500 uppercase tracking-wide mb-4">Détails de la carte</h3>
-            
+
             {creditCards.length > 0 && (
               <div className="mb-6 space-y-3">
                 <label className="text-sm font-bold text-slate-800">Choisir une carte enregistrée</label>
                 <div className="space-y-2">
                   {creditCards.map(card => (
                     <label key={card.id} className={`flex items-center gap-3 p-3 rounded-lg border cursor-pointer transition-colors ${selectedCardId === card.id ? 'border-black bg-slate-50' : 'border-slate-200 hover:border-slate-300'}`}>
-                      <input 
-                        type="radio" 
-                        name="savedCard" 
+                      <input
+                        type="radio"
+                        name="savedCard"
                         value={card.id}
                         checked={selectedCardId === card.id}
                         onChange={() => setSelectedCardId(card.id)}
@@ -80,9 +80,9 @@ export const Checkout: React.FC<CheckoutProps> = ({ cartItems, onCheckout, credi
                     </label>
                   ))}
                   <label className={`flex items-center gap-3 p-3 rounded-lg border cursor-pointer transition-colors ${selectedCardId === 'new' ? 'border-black bg-slate-50' : 'border-slate-200 hover:border-slate-300'}`}>
-                    <input 
-                      type="radio" 
-                      name="savedCard" 
+                    <input
+                      type="radio"
+                      name="savedCard"
                       value="new"
                       checked={selectedCardId === 'new'}
                       onChange={() => setSelectedCardId('new')}
@@ -98,8 +98,8 @@ export const Checkout: React.FC<CheckoutProps> = ({ cartItems, onCheckout, credi
               <>
                 <div className="space-y-2">
                   <label className="text-sm font-bold text-slate-800">Nom sur la carte</label>
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
                     placeholder="Alexandre Dupont"
                     className="w-full bg-slate-50 border border-slate-300 rounded-lg px-4 py-3 text-black font-medium placeholder-slate-400 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all"
                     required={selectedCardId === 'new'}
@@ -109,8 +109,8 @@ export const Checkout: React.FC<CheckoutProps> = ({ cartItems, onCheckout, credi
                 <div className="space-y-2">
                   <label className="text-sm font-bold text-slate-800">Numéro de carte</label>
                   <div className="relative">
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
                       placeholder="0000 0000 0000 0000"
                       className="w-full bg-slate-50 border border-slate-300 rounded-lg px-4 py-3 pl-12 text-black font-medium placeholder-slate-400 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all font-mono"
                       required={selectedCardId === 'new'}
@@ -122,8 +122,8 @@ export const Checkout: React.FC<CheckoutProps> = ({ cartItems, onCheckout, credi
                 <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <label className="text-sm font-bold text-slate-800">Expiration</label>
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
                       placeholder="MM/AA"
                       className="w-full bg-slate-50 border border-slate-300 rounded-lg px-4 py-3 text-black font-medium placeholder-slate-400 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all text-center"
                       required={selectedCardId === 'new'}
@@ -131,8 +131,8 @@ export const Checkout: React.FC<CheckoutProps> = ({ cartItems, onCheckout, credi
                   </div>
                   <div className="space-y-2">
                     <label className="text-sm font-bold text-slate-800">CVC</label>
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
                       placeholder="123"
                       className="w-full bg-slate-50 border border-slate-300 rounded-lg px-4 py-3 text-black font-medium placeholder-slate-400 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all text-center"
                       required={selectedCardId === 'new'}
@@ -144,8 +144,8 @@ export const Checkout: React.FC<CheckoutProps> = ({ cartItems, onCheckout, credi
           </div>
 
           <div className="pt-8 border-t border-slate-200 mt-6">
-            <button 
-              type="submit" 
+            <button
+              type="submit"
               disabled={isProcessing || cartItems.length === 0}
               className={`
                 w-full bg-black hover:bg-slate-900 text-white font-bold py-4 rounded-lg transition-all shadow-lg hover:shadow-xl flex justify-between px-6
@@ -153,13 +153,13 @@ export const Checkout: React.FC<CheckoutProps> = ({ cartItems, onCheckout, credi
               `}
             >
               <span>{isProcessing ? 'Traitement en cours...' : 'Payer maintenant'}</span>
-              <span>{total.toFixed(2)}€</span>
+              <span>{total.toFixed(2)} $</span>
             </button>
             <div className="flex justify-center gap-4 mt-6 opacity-50">
-               {/* Mock Payment Icons */}
-               <div className="w-10 h-6 bg-slate-400 rounded-sm"></div>
-               <div className="w-10 h-6 bg-slate-400 rounded-sm"></div>
-               <div className="w-10 h-6 bg-slate-400 rounded-sm"></div>
+              {/* Mock Payment Icons */}
+              <div className="w-10 h-6 bg-slate-400 rounded-sm"></div>
+              <div className="w-10 h-6 bg-slate-400 rounded-sm"></div>
+              <div className="w-10 h-6 bg-slate-400 rounded-sm"></div>
             </div>
             <p className="text-center text-xs text-slate-500 font-medium mt-4">
               Vos informations de paiement sont chiffrées (256-bit SSL) et sécurisées.

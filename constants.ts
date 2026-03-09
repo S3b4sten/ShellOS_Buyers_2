@@ -200,7 +200,7 @@ export const MOCK_PRODUCTS: Product[] = [
     name: 'John Coltrane - A Love Supreme',
     category: 'Jazz',
     price: 29.99,
-    image: "https://images.pexels.com/photos/164821/pexels-photo-164821.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+    image: "https://cdn.shoplightspeed.com/shops/607339/files/57538848/1500x1500x2/john-coltrane-a-love-supreme-gatefold-edition-blue.jpg",
     isNew: false,
     description: 'Un chef-d\'œuvre du jazz spirituel, considéré comme l\'un des plus grands albums de tous les temps.',
     details: {
