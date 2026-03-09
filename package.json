@@ -1,19 +1,21 @@
 {
-  "name": "shellos-buyers",
+  "name": "shellos",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "serve -s dist -l 3000"
   },
   "dependencies": {
     "react-dom": "^19.2.4",
     "react-router-dom": "^7.13.0",
     "react": "^19.2.4",
     "lucide-react": "^0.574.0",
-    "@google/genai": "^1.41.0"
+    "@google/genai": "^1.41.0",
+    "serve": "14.2.5"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
