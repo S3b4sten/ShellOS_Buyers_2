@@ -184,7 +184,7 @@ export const MOCK_PRODUCTS: Product[] = [
     name: 'Daft Punk - Discovery',
     category: 'Electronic',
     price: 32.50,
-    image: "https://images.pexels.com/photos/114820/pexels-photo-114820.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+    image: "https://m.media-amazon.com/images/I/81G3AiMU+pL._AC_SL1500_.jpg",
     isNew: false,
     description: 'L\'album qui a redéfini la musique électronique au début des années 2000.',
     details: {
